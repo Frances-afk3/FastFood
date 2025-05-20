@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: FastFood API
+  version: 1.0.0
+paths:
+  /ristoranti:
+    get:
+      summary: Lista dei ristoranti
+      responses:
+        200:
+          description: OK
+  /menu/{ristoranteId}:
+    get:
+      summary: Menu per ristorante
+      parameters:
+        - name: ristoranteId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: OK
+  /condimenti:
+    get:
+      summary: Lista condimenti
+      responses:
+        200:
+          description: OK
+  /ordini:
+    post:
+      summary: Effettua un ordine
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Ordine registrato
+  /user:
+    post:
+      summary: Registrazione utente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Utente registrato
+  /user/login:
+    post:
+      summary: Login utente
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        200:
+          description: Login OK
