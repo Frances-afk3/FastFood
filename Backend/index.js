@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-import { logger } from "./middleware/logger.js";
+import { logger } from "./Middleware/logger.js";
 import { errorHandler } from "./Middleware/errorHandler.js";
 import swagger from "./swagger.js";
 
