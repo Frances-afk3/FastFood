@@ -4,7 +4,7 @@ import { db } from "../db.js";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const ristoranti = await db.collection("ristoranti").find().toArray();
+  const ristoranti = await db.collection("_Ristoranti").find().toArray();
   res.json(ristoranti);
 });
 

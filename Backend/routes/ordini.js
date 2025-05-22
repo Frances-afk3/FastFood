@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
   const ordine = req.body;
-  const result = await db.collection("ordini").insertOne(ordine);
+  const result = await db.collection("_Ordinazioni").insertOne(ordine);
   res.json({ success: true, id: result.insertedId });
 });
 
